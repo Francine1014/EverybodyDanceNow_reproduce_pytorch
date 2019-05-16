@@ -97,10 +97,10 @@ for idx in tqdm(range(len(os.listdir(str(img_dir))))):
     distinguish=head_cord[0] - crop_size
     if distinguish<0:
         head = img[int(head_cord[1] - crop_size): int(head_cord[1] + crop_size),
-           : 50, :]
+                   : 50, :]
     else:
         head = img[int(head_cord[1] - crop_size): int(head_cord[1] + crop_size),
-           int(head_cord[0] - crop_size): int(head_cord[0] + crop_size), :]
+                   int(head_cord[0] - crop_size): int(head_cord[0] + crop_size), :]
     plt.imshow(head)
     plt.savefig(str(train_head_dir.joinpath('pose_{}.jpg'.format(idx))))
     plt.clf()
